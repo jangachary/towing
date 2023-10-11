@@ -69,7 +69,6 @@ h6 {
   opacity: 1;
 }
 
-
 .tow-primary {
   color: #ffbb38;
 }
@@ -161,7 +160,6 @@ h6 {
   max-height: 80px;
 }
 
-
 /*** Carousel Start ***/
 
 .carousel-item {
@@ -175,7 +173,7 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .carousel-caption {
@@ -206,7 +204,7 @@ h6 {
 .carousel-control-prev:hover {
   /* background: var(--bs-secondary); */
   background: #524f4f;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .carousel-control-next {
@@ -224,7 +222,7 @@ h6 {
 .carousel-control-next:hover {
   /* background: var(--bs-secondary); */
   background: #524f4f;
-  transition: .8s;
+  transition: 0.8s;
 }
 
 .carousel-caption .carousel-content a button.carousel-content-btn1 {
@@ -314,11 +312,12 @@ h6 {
 }
 
 .page-header {
-  background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpg) center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/carousel-1.jpg) center center no-repeat;
   background-size: cover;
 }
 
-.page-header .breadcrumb-item+.breadcrumb-item::before {
+.page-header .breadcrumb-item + .breadcrumb-item::before {
   color: var(--bs-white);
 }
 
@@ -352,7 +351,6 @@ h6 {
 }
 
 @media (max-width: 992px) {
-
   .get-started-btn,
   .book-now-btn {
     padding: 7px 20px 8px 20px;
@@ -364,9 +362,6 @@ h6 {
   font-weight: 700;
   background-color: transparent;
 }
-
-
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -413,7 +408,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #ffc451;
 }
 
@@ -450,11 +445,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -466,7 +461,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -478,7 +473,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -545,7 +540,7 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #151515;
   background-color: #ffc451;
 }
@@ -582,11 +577,11 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   background-color: #ffc451;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -861,7 +856,8 @@ p.no-styles {
   color: unset;
 }
 
-.services .section-title h3,.features .section-title h3 {
+.services .section-title h3,
+.features .section-title h3 {
   font-weight: 700;
   font-size: 28px;
   font-family: "Poppins", sans-serif;
@@ -923,12 +919,95 @@ p.no-styles {
 }
 
 /*--------------------------------------------------------------
+# Scrap services
+--------------------------------------------------------------*/
+
+.services .section-title p,
+p.no-styles {
+  margin: 0;
+  margin: 0;
+  font-size: unset;
+  font-weight: unset;
+  text-transform: unset;
+  font-family: unset;
+  color: unset;
+}
+
+.icon-box:hover .section-title h3,
+.features .section-title h3 {
+  font-weight: 700;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+}
+
+.icon-box:hover .icon-box {
+  text-align: center;
+  border: 1px solid #ebebeb;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+}
+
+.icon-box:hover .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #ffc451;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.icon-box:hover .icon-box .icon i,
+.icon-box:hover .icon-box .icon svg {
+  color: #151515;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-box:hover .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.icon-box:hover .icon-box h4 a {
+  color: #151515;
+  transition: ease-in-out 0.3s;
+}
+
+.icon-box:hover .icon-box h4 a:hover {
+  color: #ffc451;
+}
+
+.icon-box:hover .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.icon-box:hover .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
+
+/*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
   padding: 60px 0;
+}
+
+#cta-2.cta {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/scrap-car.jpg") fixed center center;
 }
 
 .cta h3 {
@@ -1100,7 +1179,10 @@ p.no-styles {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1108,7 +1190,10 @@ p.no-styles {
   border: 1px solid #ffc451;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #ffc451;
 }
 
@@ -1131,7 +1216,7 @@ p.no-styles {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1486,7 +1571,7 @@ p.no-styles {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1539,7 +1624,7 @@ p.no-styles {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #ffc451;
   border: 0;
   padding: 10px 24px;
@@ -1548,7 +1633,7 @@ p.no-styles {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #ffcd6b;
 }
 
@@ -1585,11 +1670,11 @@ p.no-styles {
   margin: 0;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #2f2f2f;
@@ -1730,13 +1815,13 @@ p.no-styles {
   border-radius: 4px;
 }
 
-#footer .footer-top .footer-newsletter form input[type=email] {
+#footer .footer-top .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 4px;
   width: calc(100% - 110px);
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit] {
+#footer .footer-top .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: -2px;
@@ -1751,7 +1836,7 @@ p.no-styles {
   border-radius: 0 4px 4px 0;
 }
 
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
+#footer .footer-top .footer-newsletter form input[type="submit"]:hover {
   background: #ffcd6b;
 }
 
